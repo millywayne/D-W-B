@@ -37,33 +37,8 @@
         </ul>
         <p>So basically,the App takes your birthday and calculates the day of the week you were born, then depending on your gender,it,shows you your Akan name in place of the name of the day of the week you were born.</p>
        
-        <ul>
-            <h4>Days of the week</h4>
-       <li>days[0] = "Saturday" </li>
-       <li>days[1] = "Sunday"</li>
-       <li>days[1] = "monday"</li>
-       <li> days[3] = "Tuesday"</li>
-       <li>days[4] = "Wednesday"</li>
-       <li> days[5] = "Thursday"</li>
-       <li>days[6] = "Friday"</li>
-       </ul>
-       
-       <ul> 
-           <h4>Months of the year</h4>
-           <li> months[1] = "January" </li>
-           <li> months[2] = "February" </li>
-           <li>months[3] = "March" </li>
-           <li> months[4] = "April" </li>
-           <li>months[5] = "May" </li>
-           <li> months[6] = "June"</li>
-           <li>months[6] = "June"</li>
-           <li>months[8] = "August"</li>
-          <li> months[9] = "September"</li>
-          <li> months[10] = "October"</li>
-          <li> months[11] = "November"</li>
-          <li>months[12] = "December"</li>
-      </ul>
-      <script>
+      
+ <script>
          //General Array Function
 function MakeArray(n) {
    this.length = n;
@@ -71,7 +46,10 @@ function MakeArray(n) {
      this[i] = 0;
    }
 }
-
+//Initialize Gender Arrays
+days = new MakeArray()
+Gender = "Female"
+Gender = "Male"
 //Initialize Days of Week Array
 days = new MakeArray(7);
 days[0] = "Saturday"
@@ -81,6 +59,25 @@ days[3] = "Tuesday"
 days[4] = "Wednesday"
 days[5] = "Thursday"
 days[6] = "Friday"
+
+//Initialize Akan Names Arrays
+Name = new MaleName
+Sunday = "Kwasi"
+Monday = "Kwadwo"
+Tuesday = "Kwabena"
+Wednesday = "Kwaku"
+Thursday = "Yaa"
+Friday = "Kofi"
+Saturday = "Kwame"
+ 
+ Name = new FemaleName
+ Sunday = "Akosua"
+ Monday = "Adwoa"
+ Tuesday = "Abenaa"
+ Wednesday = "Akua"
+ Thursday = "Yaa"
+ Friday = "Afua"
+ Saturday = "Ama"
 
 //Initialize Months Array
 months = new MakeArray(12);
@@ -101,16 +98,16 @@ months[12] = "December"
 function compute(form) {
    var val1 = parseInt(form.day.value, 10)
    if ((val1 < 0) || (val1 > 31)) {
-      alert("Day is out of range")
+      alert("Invalid Day")
    }
    var val2 = parseInt(form.month.value, 10)
    if ((val2 < 0) || (val2 > 12)) {
-      alert("Month is out of range")
+      alert("Invalid month")
    }  
    var val2x = parseInt(form.month.value, 10)
    var val3 = parseInt(form.year.value, 10)
    if (val3 < 1900) {
-      alert("You're that old!")
+    alert("Are you that old!")
    }
    if (val2 == 1) {
       val2x = 13;
@@ -127,13 +124,11 @@ function compute(form) {
    var val8 = val1+(val2x*2)+val4+val3+val5-val6+val7+2
    var val9 = parseInt(val8/7, 10)
    var val0 = val8-(val9*7)
-   form.result1.value = months[val2]+" "+form.day.value +", "+form.year.value
-   form.result2.value = days[val0]
+   form.result1.value = genders[val1]+" "+form.Name.Value+", " +form.year.value
+   form.result2.value = months[val2]+" "+form.day.value +", "+form.year.value
+   form.result3.value = days[val0]
 }   
-
-// end script -->
 </script> 
-      </script>
         <div class="discription">
  <h5><i>Know the Akan Name of the day of the week you were born.</i><h5>
   <p><b>Enter your birthday</b>(then hit the update button):</p>
