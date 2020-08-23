@@ -46,6 +46,7 @@ function MakeArray(n) {
      this[i] = 0;
    }
 }
+
 //Initialize Gender Arrays
 days = new MakeArray()
 Gender = "Female"
@@ -94,6 +95,16 @@ months[10] = "October"
 months[11] = "November"
 months[12] = "December"
 
+function getDayName(dateStr, locale)
+{
+    var date = new Date(dateStr);
+    return date.toLocaleDateString(locale, { weekday: 'long' });      
+}
+
+var dateStr = '23';
+var day = getDayName(dateStr, "nl-NL"); // Gives back 'Kwasi' which is Akan for Sunday.
+
+
 //Day of Week Function
 function compute(form) {
    var val1 = parseInt(form.day.value, 10)
@@ -109,11 +120,11 @@ function compute(form) {
    if (val3 < 1900) {
     alert("Are you that old!")
    }
-   if (val2 == 1) {
+   if (val2 === 1) {
       val2x = 13;
       val3 = val3-1
    }
-   if (val2 == 2) {
+   if (val2 === 2) {
       val2x = 14;
       val3 = val3-1
    }
@@ -124,24 +135,33 @@ function compute(form) {
    var val8 = val1+(val2x*2)+val4+val3+val5-val6+val7+2
    var val9 = parseInt(val8/7, 10)
    var val0 = val8-(val9*7)
-   form.result1.value = genders[val1]+" "+form.Name.Value+", " +form.year.value
    form.result2.value = months[val2]+" "+form.day.value +", "+form.year.value
    form.result3.value = days[val0]
-}   
+} 
 </script> 
-        <div class="discription">
+ <div class="description">
  <h5><i>Know the Akan Name of the day of the week you were born.</i><h5>
   <p><b>Enter your birthday</b>(then hit the update button):</p>
   <form action="group">
     <form>
         <div class="form-group">
-           <p>Gender(eg. female):<input TYPE="text" Name="gender" SIZE="3" ></p>
-           <p>Numeric month(12):<input TYPPE="text" NAME ="month" SIZE="2"></p>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Gender
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="Female">Female</a></li>
+                  <li><a href="Male">Male</a></li>
+                  <li><a href="Other">Other</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="Choose one">Choose one</a></li>
+                </ul>
+              </div>
+           <p>Numeric month(1-12):<input TYPPE="text" NAME ="month" SIZE="2"></p>
            <p>Day of the month(1-31):<input TYPE="text" NAME="Akan" SIZE="2.5"></p>
               <p>Year(eg, 1985): <input TYPE="text" NAME="year" size="5"></p>
-             
-              <p><Input TYPE="button" VALUE="Update" ONCLICK="compute(this.form)"><input TYPE="reset" VALUE="clear"> </p>
-                <p>Gender:<input TYPE="text" NAME="result1" SIZE="20"> </p>
+             <p><Input TYPE="button" VALUE="Update" ONCLICK="compute(this.form)"><input TYPE="reset" VALUE="clear"> </p>
                 <p>Date of birth: <input TYPE="text"  NAME="result2" SIZE="20"></p>
                 <P>Day of the week: <input TYPE="text" NAME="result3" SIZE="20"></P>
                </div>
@@ -152,6 +172,5 @@ function compute(form) {
 </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.minjs" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>  
-  
-</body>
+  </body>
 </html>
