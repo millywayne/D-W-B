@@ -14,7 +14,7 @@
     <div class="jumbotron">
         <div class="description">
             <h1>D-W-B</h1>
-            <P>D-W-B simply means Days and Week of Birth. Most people know the year of birth but cannot quiet figure out what day of the week they were born. well, D-W-B is here for you!</P>
+            <P>D-W-B simply means Days and Week of Birth. Most people know the year of birth but cannot quite figure out what day of the week they were born. Well, D-W-B is here for you!</P>
            <p>Akan names are derived from Ghanian culture. In GHANA, children are given their first name as a "day name" which corresponds to the week they were born.The day names are:</p>
        <h3 class="gb primary">Male Names</h3>
            <ul>
@@ -35,7 +35,7 @@
 <li>Friday: Afua</li>
 <li>Saturday: Ama</li>
         </ul>
-        <p>So basically,the App takes your birthday and calculates the day of the week you were born, then depending on your gender,it,shows you your Akan name in place of the name of the week.</p>
+        <p>So basically,the App takes your birthday and calculates the day of the week you were born, then depending on your gender,it,shows you your Akan name in place of the name of the day of the week you were born.</p>
        
         <ul>
             <h4>Days of the week</h4>
@@ -64,19 +64,21 @@
           <li>months[12] = "December"</li>
       </ul>
         <div class="discription">
- <h5><i>Know the day of the week you were born.</i><h5>
+ <h5><i>Know the Akan Name of the day of the week you were born.</i><h5>
   <p><b>Enter your birthday</b>(then hit the update button):</p>
   <form action="group">
     <form>
         <div class="form-group">
-            <select class="custom-select" size="12">
-                <option selected>Open this select menu</option>
-                <option value="1">1985 </option>
-                <option value="2">1986</option>
-                <option value="3">1987</option>
-              </select>
-              <p>Year(2021-1985): <input type="text" Name="year" size="2"></p>
-              <p>Numeric month(1-12):<input type="text" Name(month)></p>
+           <p>Gender(eg. female:<input Type="text" Name="gender" SIZE="3" ></p>
+           <p>Numeric month(12):<input type="text" NAME ="month" SIZE="2"></p>
+           <p>Day of the month(1-31):<input TYPE="text" NAME="Akan" SIZE="2.5"></p>
+              <p>Year(eg, 1985): <input type="text" NAME="year" size="5"></p>
+             
+              <p><Input TYPE="button" VALUE="Update" ONCLICK="compute(this.form)"input TYPE=reset VALUE="clear"> </p>
+                <p>Date of birth: <input TYPE="text"  NAME="result1" SIZE="20"></p>
+                <P>Day of the week: <input TYPE="text" NAME="result2" SIZE="20"></P>
+
+
               
        
           
