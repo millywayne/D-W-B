@@ -28,5 +28,16 @@
         }
       }
     }
-    function makeArray(Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday) {
-   
+    function makeArray(sunday, monday, tuesday, wednesday, thursday, friday, saturday){
+  this.firstDay = sunday;
+  this.secondDay = monday;
+  this.thirdDay = tuesday;
+  this.fourthDay = wednesday;
+  this.fifthDay = thursday;
+  this.sixthDay = friday;
+  this.seventhDay = saturday;
+    }
+     var akanMaleName = makeArray("Kwasi","Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame");
+     var akanFemaleName = makeArray("Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama");
+
+     document.getElementById(akan).innerHTML ="My akan name is " + akanMaleName.firstDay + ". My akan name is " + akanFemaleName.firstDay
