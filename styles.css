@@ -32,3 +32,14 @@
   
   .show {display: flex;
 }
+h1{
+    text-align: center;
+    color:#2980B9;
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    font-size: medium;
+}

@@ -1,7 +1,6 @@
     var birthYear = document.getElementById("month").value;
     let birthMonth = document.getElementById("year").value;
     let birthDate = document.getElementById("akan").value;
-    let getGender = document.getElementById("gender").value;
    
     function myFunction(){
        var d = new Name();
@@ -40,4 +39,4 @@
      var akanMaleName = makeArray("Kwasi","Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame");
      var akanFemaleName = makeArray("Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama");
 
-     document.getElementById(akan).innerHTML ="My akan name is " + akanMaleName.firstDay + ". My akan name is " + akanFemaleName.firstDay
+     document.getElementById(akan).innerHTML ="My akan name is " + akanMaleName.day + "My akan name is " + akanFemaleName.firstDay
