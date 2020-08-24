@@ -63,3 +63,12 @@ li{
     font-style: oblique;
     color:rgb(110, 82, 82);
 }
+h3{
+    color: black;
+    font-size: medium;
+}
+h5{
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
