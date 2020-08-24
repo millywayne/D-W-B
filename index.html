@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-     <link rel="stylesheet" type="text/css" href="styles.css">
+     <link rel="stylesheet" type="text/css" href="styles.css" media="all">
     <title>D-W-B</title>
 </head>
 <body> 
@@ -36,38 +36,37 @@
        </ul>
        
 <p>So basically,the App takes your birthday and calculates the day of the week you were born, then depending on your gender,it,shows you your Akan name in place of the name of the day of the week you were born.</p>
+<form class="myform" onsubmit="return getAkanName()">
  
         <div class="description">
   <h5><bold>Know the Akan Name of the day of the week you were born.</bold><h5>
   <p><b>Choose your gender</b></p>
   
-  <form action="/action_page.php">
-   
-  </div>
-  
-  <form action="group">
-    <form>
+    </div>
+    <form class="myform" onsubmit="return getAkanName()">
+        <br>
+        <label for="gender">Gender</label>
         <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
+        <label for="male">Male</label>
         <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-        <div class="form-group">
-           <p>Numeric month(1-12):<input type="number" name ="month" id="month" min="1" max="12" required size="2"></p>
-           <p>Day of the month(1-31):<input type="number" name="day" id="day" min="1" max="31" required size="2.5"></p>
-              <p>Year(eg, 1985): <input type="number" name="year" id="year"required size="5"></p>
-              <p>Click the button to display your Akan name</p>
-              <button onclick= "giveName()">update</button>
-              <p id = "akan"></p>
-             <p><input type="reset"value="Clear"> </p>
-                <p>Date of birth: <output type="text"  name="result1"></p>
-                <P>Day of the week: <output type="text" name="result2" ></P>
-                <p>Your Akan name is:<output type="text" name="result3" ></p>
-               </div>
-            </form>  
+        <label for="female">Female</label>
+        <br><br>  
+    
+          <p>Numeric month(1-12):<input type="number" name ="month" id="month" min="1" max="12" placeholder="MM" required size="2"></p>
+           <p>Day of birth(1-31):<input type="number" name="day" id="day" min="1" max="31" placeholder="DD" required size="2.5"></p>
+              <p>Year(eg, 1985): <input type="number" name="year" id="year-input" placeholder="YYYY" required size="5"></p>
+              <h4 id = display-name><em>Click the update button to display your Akan name</em></h4>
+              
+              <input id="get-name" type="submit" name="" value="Update name">    
+          <br><br>
+        </form>
+        <form onsubmit="return clear()">
+          <input class="clear" type="submit" value="Clear">
+        </form>
+        <p id="result"></p>
+         </div> 
     </div>
     </div>
-</div>
-</div>
 
    <script src="script.js"></script>  
   </body>
