@@ -50,17 +50,15 @@
         <label for="male">Male</label>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label>
-        <br><br>  
-    
-          <p>Numeric month(1-12):<input type="number" name ="month" id="month" min="1" max="12" placeholder="MM" required size="2"></p>
+        <br>  
+     <p>Numeric month(1-12):<input type="number" name ="month" id="month" min="1" max="12" placeholder="MM" required size="2"></p>
            <p>Day of birth(1-31):<input type="number" name="day" id="day" min="1" max="31" placeholder="DD" required size="2.5"></p>
               <p>Year(eg, 1985): <input type="number" name="year" id="year-input" placeholder="YYYY" required size="5"></p>
               <h4 id = display-name><em>Click the update button to display your Akan name</em></h4>
-              
               <input id="get-name" type="submit" name="" value="Update name">    
           <br><br>
         </form>
-        <form onsubmit="return clear()">
+        <form onclick="return name()">
           <input class="clear" type="submit" value="Clear">
         </form>
         <p id="result"></p>
