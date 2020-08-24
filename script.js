@@ -39,4 +39,5 @@
      var akanMaleName = makeArray("Kwasi","Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame");
      var akanFemaleName = makeArray("Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama");
 
-     document.getElementById(akan).innerHTML ="My akan name is " + akanMaleName.day + "My akan name is " + akanFemaleName.firstDay
+     document.getElementById(akan).innerHTML ="Your akan name is " + akanMaleName.day + "Your akan name is " + akanFemaleName.firstDay
+    
