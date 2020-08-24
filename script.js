@@ -74,5 +74,4 @@ const { get } = require("jquery");
       return false;
     } else {
       alert("Your day/month submission is invalid, please try again!");
-    }document.getElementById("result").innerHTML = "The day is on a saturday." + " " + "Your akan name is ama";
-  
+    }

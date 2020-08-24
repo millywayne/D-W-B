@@ -43,7 +43,7 @@
   <p><b>Choose your gender</b></p>
   
     </div>
-    <form class="myform" onsubmit="return getAkanName()">
+    <form class="myform" >
         <br>
         <label for="gender">Gender</label>
         <input type="radio" id="male" name="gender" value="male">
@@ -55,10 +55,10 @@
            <p>Day of birth(1-31):<input type="number" name="day" id="day" min="1" max="31" placeholder="DD" required size="2.5"></p>
               <p>Year(eg, 1985): <input type="number" name="year" id="year-input" placeholder="YYYY" required size="5"></p>
               <h4 id = display-name><em>Click the update button to display your Akan name</em></h4>
-              <input id="get-name" type="submit" name="" value="Update name">    
+              <input id="get-name" type="submit" onsubmit="getAkanName()" value="Update name">    
           <br><br>
         </form>
-        <form onclick="return name()">
+        <form onclick="clearInput()">
           <input class="clear" type="submit" value="Clear">
         </form>
         <p id="result"></p>
