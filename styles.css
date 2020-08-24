@@ -1,6 +1,6 @@
 .dropbtn {
-    background-color: #3498DB;
-    color: white;
+    background-color: white;
+    color: blue;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -48,11 +48,7 @@ font-weight: bold;
 color:black;
 font-family:sans-serif;
 }
-ul{
-    
-    padding-block-end: 10px;
-    border-right-color: blue;
-}
+
 form{
     background-color: #3498DB;
     color: white;
@@ -60,4 +56,10 @@ form{
     font-size: 16px;
     border: none;
     cursor: pointer; 
+}
+
+li{
+    font-weight: bold;
+    font-style: oblique;
+    color:rgb(110, 82, 82);
 }
