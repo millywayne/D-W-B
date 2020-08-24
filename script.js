@@ -1,7 +1,38 @@
-    var birthYear = document.getElementById("month").value;
-    let birthMonth = document.getElementById("year").value;
+    function  giveName(){
+    var birthYear = document.getElementById("year").value;
+    let birthMonth = document.getElementById("month").value;
     let birthDate = document.getElementById("akan").value;
-   
+    let gender = document.getElementByName("genders");
+
+    function gender(){
+       for (gender of genders){
+          if (gender.checked) return gender.value
+       }
+    }
+   function mapMonth(){
+      if (birthMonth<1 || birthMonth>12){
+         return false ;
+      }
+      else return true;
+   }
+   function weekDay(){
+      if (birthMonth === 2 && Number(birthYear)%4===0){
+         if (birthDate>28 || birthDate <1){
+            return false;
+         }
+         else if (birthMonth == 2 && birthDate>29){
+            return false;
+         } else {
+            return true;
+         }
+      }
+        else if (birthDate <1 || birthDate > 31){
+            return false;
+         }else {
+            return true;
+         }
+      }
+   }
     function myFunction(){
        var d = new Name();
        var weekday = new Array(7);
@@ -39,5 +70,6 @@
      var akanMaleName = makeArray("Kwasi","Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame");
      var akanFemaleName = makeArray("Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama");
 
-     document.getElementById(akan).innerHTML ="Your akan name is " + akanMaleName.day + "Your akan name is " + akanFemaleName.firstDay
-    
+     document.getElementById(akan).innerHTML ="Your akan name is " + akanMaleName.day + "Your akan name is " + akanFemaleName.Day
+    console.log(akanMaleName + akanFemaleName);
+   }
