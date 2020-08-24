@@ -41,5 +41,23 @@ h1{
     font-size: 16px;
     border: none;
     font-weight: bold;
-    font-size: medium;
+    font-size: larger;
+}
+p{
+font-weight: bold;
+color:black;
+font-family:sans-serif;
+}
+ul{
+    
+    padding-block-end: 10px;
+    border-right-color: blue;
+}
+form{
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer; 
 }
