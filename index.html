@@ -35,20 +35,26 @@
         </ul>
         <p>So basically,the App takes your birthday and calculates the day of the week you were born, then depending on your gender,it,shows you your Akan name in place of the name of the day of the week you were born.</p>
   <div class="description">
-  <h5><i>Know the Akan Name of the day of the week you were born.</i><h5>
-  <p><b>Enter your birthday</b>(then hit the update button):</p>
+  <h5>Know the Akan Name of the day of the week you were born.<h5>
+  <p><b>Choose your gender</b></p>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Gender</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#female">Female</a>
+      <a href="#male">Male</a>
+    </div>
+  </div>
+  
   <form action="group">
     <form>
         <div class="form-group">
-            <select value={services} id="gender">
-                <option value="Female" id="female" required>Female</option>
-                <option value="Male" id="male" required>Male</option>
-           </select>
-           <p>Numeric month(1-12):<input type="number" name ="month" id="month" required size="2"></p>
-           <p>Day of the month(1-31):<input type="number" name="Akan" id="akan" required size="2.5"></p>
-              <p>Year(eg, 1985): <input type="text" name="year" id="year"
-                required size="5"></p>
-             <p><Input type="button" value="Update" onclick="compute(this.form)"><input type="reset" value="clear"> </p>
+           <p>Numeric month(1-12):<input type="number" name ="month" id="month" min="1" max="12" required size="2"></p>
+           <p>Day of the month(1-31):<input type="number" name="day" id="day" min="1" max="31" required size="2.5"></p>
+              <p>Year(eg, 1985): <input type="text" name="year" id="year"required size="5"></p>
+              <p>Click the button to display your Akan name</p>
+              <button onclick= "myFunction()">Request</button>
+              <p id = "akan"></p>
+             <p><input type="reset"value="Clear"> </p>
                 <p>Date of birth: <input type="text"  name="result2" size="20"></p>
                 <P>Day of the week: <input type="text" name="result3" size="20"></P>
                </div>
