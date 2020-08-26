@@ -12,7 +12,7 @@ function getName(){
    var gender = parseInt(document.getElementById("gender").value);
    
    if (gender == 1) {
-    else if (akanDay === 'Sunday') {
+    if (akanDay === 'Sunday') {
        document.getElementById("output").value = name + ": Born on Sunday: Akan Name would be: " + akanMale[0];
         return true;
      }
