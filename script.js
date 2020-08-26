@@ -42,7 +42,7 @@ function getName(){
      }
    }
      if (gender == 2) {
-       else if (akanDay === 'Sunday') {
+       if (akanDay === 'Sunday') {
          document.getElementById("output").value = name + ": Born on Sunday: Akan Name would be: " + akanFemale[0];
           return true;
        }
