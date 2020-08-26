@@ -1,4 +1,4 @@
-const { get } = require("jquery");
+//const { get } = require("jquery");
 
     function  getAkanName(){
     let birthYear = document.getElementById("year-input").value;
@@ -49,29 +49,29 @@ const { get } = require("jquery");
     let akanFemaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
     let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-    let monthValid = monthValidator();
-    let dayValid = dayValidator();
+    //let monthValid = monthValidator();
+    //let dayValid = dayValidator();
 
-    let dayOfWeekNumber = Math.floor((((Number(birthYear.slice(0, 2))/4)-2*Number(birthYear.slice(0, 2))-1)+((5*Number(birthYear.slice(2, 4))/4))+((26*(birthMonth+1)/10))+birthDay)%7);
+    //let dayOfWeekNumber = Math.floor((((Number(birthYear.slice(0, 2))/4)-2*Number(birthYear.slice(0, 2))-1)+((5*Number(birthYear.slice(2, 4))/4))+((26*(birthMonth+1)/10))+birthDay)%7);
 
     let index;
-    if(dayOfWeekNumber == 0){
+    //if(dayOfWeekNumber == 0){
        index = 6;
-    }else {
+   // }else {
        index = dayOfWeekNumber = 1;
-    }
-    console.log(index);
+   // }
+    //console.log(index);
 
-    if (myGenderValue == "male" && monthValid && dayValid) {
-      document.getElementById('result').textContent = "Your born day is a " + daysOfWeek[index] + " , your Akan name is " + maleAkanNames[index];
+    //if (myGenderValue == "male" && monthValid && dayValid) {
+     // document.getElementById('result').textContent = "Your born day is a " + daysOfWeek[index] + " , your Akan name is " + maleAkanNames[index];
       document.getElementById('display-name').textContent = "Your Akan name is: ";
       document.getElementById('result').style.fontSize = "16px";
-      return false;
-    } else if (myGenderValue == "female" && monthValid && dayValid) {
-      document.getElementById('result').textContent = "Your born day is a " + daysOfWeek[index] + " , your Akan name is " + femaleAkanNames[index];
+      //return false;
+    //} else if (myGenderValue == "female" && monthValid && dayValid) {
+     // document.getElementById('result').textContent = "Your born day is a " + daysOfWeek[index] + " , your Akan name is " + femaleAkanNames[index];
       document.getElementById('display-name').textContent = "Your Akan name is: ";
       document.getElementById('result').style.fontSize = "16px";
-      return false;
-    } else {
+     // return false;
+    //} else {
       alert("Your day/month submission is invalid, please try again!");
-    }
+  //  }
