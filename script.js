@@ -18,7 +18,7 @@ function getName(){
      }else{
         return true;
      }
-     else if (akanDay === 'Monday') {
+     if (akanDay === 'Monday') {
        document.getElementById("output").value = name + ": Born on Monday: Akan Name would be: " + akanMale[1];
        return false;
      }else{
