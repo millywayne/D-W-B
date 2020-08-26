@@ -1,4 +1,4 @@
-.dropbtn {
+.form-group {
     background-color: white;
     color: blue;
     padding: 16px;
@@ -28,7 +28,7 @@
     
   }
   
-  .dropdown a:hover {background-color: #ddd;}
+
   
   .show {display: flex;
 }
