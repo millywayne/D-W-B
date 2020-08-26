@@ -37,35 +37,51 @@
        
 <p>So basically,the App takes your birthday and calculates the day of the week you were born, then depending on your gender,it,shows you your Akan name in place of the name of the day of the week you were born.</p>
 <form class="myform" onsubmit="return getAkanName()">
- 
+  <div class="container">
+    <div class="jumbotron">
         <div class="description">
   <h5><bold>Know the Akan Name of the day of the week you were born.</bold><h5>
+    <h5>Enter your Name</h5>
   <p><b>Choose your gender</b></p>
   
-    </div>
-    <form class="myform" >
-        <br>
-        <label for="gender">Gender</label>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label>
-        <br>  
-     <p>Numeric month(1-12):<input type="number" name ="month" id="month" min="1" max="12" placeholder="MM" required size="2"></p>
-           <p>Day of birth(1-31):<input type="number" name="day" id="day" min="1" max="31" placeholder="DD" required size="2.5"></p>
-              <p>Year(eg, 1985): <input type="number" name="year" id="year-input" placeholder="YYYY" required size="5"></p>
-              <h4 id = display-name><em>Click the update button to display your Akan name</em></h4>
-              <input id="get-name" type="submit" onsubmit="getAkanName()" value="Update name">    
-          <br><br>
-        </form>
-        <form onclick="clearInput()">
-          <input class="clear" type="submit" value="Clear">
-        </form>
-        <p id="result"></p>
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Your name">
+            </div>
+            <div class='form-group'>
+              <label for="formGroupExampleInput">Gender</label>
+              <select class="form-control" id="gender">
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Year</label>
+              <input type="number" class="form-control" id="year" placeholder="YY">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Month</label>
+              <input type="number" min="1" max="12" class="form-control" id="month" placeholder="month">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Date</label>
+              <input type="number" min="1" max="31" class="form-control" id="date" placeholder="Enter Date">
+            </div>
+          </form>
+          <button type="submit" onclick="getName()" class="btn btn-primary">Generate</button>
+         </div>
+       <div class="col-md-6">
+          <h1>Your Akan Name is:</h1>
+          <textarea name="" cols="27" rows="3" id="output"></textarea>
+        </div>
+   <p id="result"></p>
          </div> 
     </div>
     </div>
-
+  </div>
    <script src="script.js"></script>  
   </body>
 </html>

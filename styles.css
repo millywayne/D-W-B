@@ -36,7 +36,7 @@ h1{
     text-align: center;
     color:#2980B9;
     background-color: #3498DB;
-    color: white;
+    color:blue;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -51,7 +51,7 @@ font-family:sans-serif;
 
 form{
     background-color: #3498DB;
-    color: white;
+    color:blue;
     padding: 16px;
     font-size: 16px;
     border: none;
