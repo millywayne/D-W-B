@@ -24,31 +24,31 @@ function getName(){
      }else{
         return true;
      }
-     else if (akanDay === 'Tuesday') {
+     if (akanDay === 'Tuesday') {
        document.getElementById("output").value = name + ": Born on Tuesday: Akan Name would be: " + akanMale[2];
        return false;
      }else{
         return true;
      }
-     else if (akanDay === 'Wednesday') {
+     if (akanDay === 'Wednesday') {
        document.getElementById("output").value = name + ": Born on Wednesday: Akan Name would be: " + akanMale[3];
        return false;
      }else{
         return true;
      }
-     else if (akanDay === 'Thursday') {
+     if (akanDay === 'Thursday') {
        document.getElementById("output").value = name + ": Born on Thursday: Akan Name would be: " + akanMale[4];
        return false;
      }else{
         return true;
      }
-     else if (akanDay === 'Friday') {
+     if (akanDay === 'Friday') {
        document.getElementById("output").value = name + ": Born on Friday: Akan Name would be: " + akanMale[5];
        return false;
      }else{
         return true;
      }
-     else{
+     if (akanDay === 'Saturday') {
        document.getElementById("output").value = name + ": Born on Saturday: Akan Name would be: " + akanMale[6];
        return false;
      }else{
@@ -62,37 +62,37 @@ function getName(){
        }else{
           return true;
        }
-       else if (akanDay === 'Monday') {
+       if (akanDay === 'Monday') {
          document.getElementById("output").value = name + ": Born on Monday: Akan Name would be: " + akanFemale[1];
          return false;
        }else{
           return true;
        }
-       else if (akanDay === 'Tuesday') {
+       if (akanDay === 'Tuesday') {
          document.getElementById("output").value = name + ": Born on Tuesday: Akan Name would be: " + akanFemale[2];
          return false;
        }else{
           return true;
        }
-       else if (akanDay === 'Wednesday') {
+       if (akanDay === 'Wednesday') {
          document.getElementById("output").value = name + ": Born on Wednesday: Akan Name would be: " + akanFemale[3];
          return false;
        }else{
           return true;
        }
-       else if (akanDay === 'Thursday') {
+       if (akanDay === 'Thursday') {
          document.getElementById("output").value = name + ": Born on Thursday: Akan Name would be: " + akanFemale[4];
          return false;
        }else{
           return true;
        }
-       else if (akanDay === 'Friday') {
+       if (akanDay === 'Friday') {
          document.getElementById("output").value = name + ": Born on Friday: Akan Name would be: " + akanFemale[5];
          return false;
        }else{
           return true;
        }
-       else {
+       if (akanDay === 'Saturday') {
          document.getElementById("output").value = name + ": Born on Saturday: Akan Name would be: " + akanFemale[6];
          return false;
        }else{
