@@ -58,15 +58,15 @@ function getName(){
          document.getElementById("output").value = name + ": Born on Wednesday: Akan Name would be: " + akanFemale[3];
           return true;
        }
-       if (akanDay === 'Thursday') {
+       else if (akanDay === 'Thursday') {
          document.getElementById("output").value = name + ": Born on Thursday: Akan Name would be: " + akanFemale[4];
           return true;
        }
-       if (akanDay === 'Friday') {
+       else if (akanDay === 'Friday') {
          document.getElementById("output").value = name + ": Born on Friday: Akan Name would be: " + akanFemale[5];
           return true;
        }
-       if (akanDay === 'Saturday') {
+       else if (akanDay === 'Saturday') {
          document.getElementById("output").value = name + ": Born on Saturday: Akan Name would be: " + akanFemale[6];
           return true;
        }
